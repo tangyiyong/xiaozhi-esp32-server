@@ -463,7 +463,7 @@ if __name__ == '__main__':
     from sentence_transformers import SentenceTransformer
     # 示例使用
     embedding_model = SentenceTransformer('jinaai/jina-embeddings-v2-base-zh', trust_remote_code=True, device="cpu")
-    memory_manager = MemoryManager(llm=None, embedding_model=embedding_model, max_memory_length=100)
+    memory_manager = MemoryManager(llm=None, embd=embedding_model, max_memory_length=100)
 
     # 模拟两段对话
     chat_paragraph1 = [
